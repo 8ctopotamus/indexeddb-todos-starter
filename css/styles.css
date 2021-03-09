@@ -1,0 +1,44 @@
+.todo-list {
+  margin: 0 auto;
+  margin-top: 75px;
+}
+
+.new-item .container {
+  padding: 0;
+}
+
+input.new-item:focus {
+  outline: none;
+}
+
+.list-group-item {
+  display: flex;
+  align-items: center;
+}
+
+.new-item {
+  display: block;
+}
+
+.list-group-item span {
+  margin-right: auto;
+}
+
+.list-group-item > button.delete,
+.list-group-item > button.complete {
+  margin-left: 5px;
+}
+
+.edit {
+  width: 100%;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+@media (max-width: 991.98px) {
+  .new-item .btn {
+    margin-top: 10px;
+  }
+}
