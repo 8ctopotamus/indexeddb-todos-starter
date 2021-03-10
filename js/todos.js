@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', (e) => {
   const todoListSpan = document.querySelector('.todo-container')
 
   const getTodos = () => {
-    fetch('/api/todos')
-      .then(response => response.json())
-      .then(todos => renderTodoList(todos))
+    // fetch('/api/todos')
+    //   .then(response => response.json())
+    //   .then(todos => renderTodoList(todos))
   }
 
   const renderTodoList = todos => {
@@ -26,36 +26,36 @@ document.addEventListener('DOMContentLoaded', (e) => {
   form.addEventListener('submit', e => {
     e.preventDefault()
     const text = newTodoInput.value
-    fetch('/api/todos', {
-      method: 'POST',
-      body: JSON.stringify({ text }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })
-      .then(getTodos)
-      .catch(err => console.error(err))
+    // fetch('/api/todos', {
+    //   method: 'POST',
+    //   body: JSON.stringify({ text }),
+    //   headers: {
+    //     'Content-Type': 'application/json'
+    //   }
+    // })
+    //   .then(getTodos)
+    //   .catch(err => console.error(err))
   })
 
 
   const deleteTodo = id => {
-    fetch(`/api/todos/${id}`, {
-      method: 'DELETE'
-    })
-      .then(getTodos)
-      .catch(err => console.error(err))
+    // fetch(`/api/todos/${id}`, {
+    //   method: 'DELETE'
+    // })
+    //   .then(getTodos)
+    //   .catch(err => console.error(err))
   }
 
   const updateTodo = newTodo => {
-    fetch(`/api/todos/${newTodo.id}`, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(newTodo)
-    })
-      .then(getTodos)
-      .catch(err => console.error(err))
+    // fetch(`/api/todos/${newTodo.id}`, {
+    //   method: 'PUT',
+    //   headers: {
+    //     'Content-Type': 'application/json'
+    //   },
+    //   body: JSON.stringify(newTodo)
+    // })
+    //   .then(getTodos)
+    //   .catch(err => console.error(err))
   }
 
   todoListSpan.addEventListener('click', e => {
@@ -97,5 +97,5 @@ document.addEventListener('DOMContentLoaded', (e) => {
     }
   }, true)
 
-  getTodos()
+  // getTodos()
 });
